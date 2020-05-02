@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <!--所有的公共api、bean、异常、模型等-->
     <artifactId>gmall-api</artifactId>
-
 
 
     <!--导入大家后来公共使用的包-->
@@ -33,6 +33,8 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.2</version>
+            <!--可选依赖，只是为了防止工程mp的注解报错问题-->
+           <!-- <optional>true</optional>-->
         </dependency>
 
         <dependency>
@@ -40,14 +42,10 @@
             <artifactId>sharding-jdbc-core</artifactId>
             <version>2.0.3</version>
         </dependency>
+
+
+
     </dependencies>
-
-
-
-
-
-
-
 
 
 </project>
