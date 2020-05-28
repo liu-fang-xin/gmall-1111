@@ -20,7 +20,7 @@ import org.springframework.util.DigestUtils;
  */
 @Component
 @Service
-public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements AdminService {
+public class  AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements AdminService {
 
     @Autowired
     AdminMapper adminMapper;

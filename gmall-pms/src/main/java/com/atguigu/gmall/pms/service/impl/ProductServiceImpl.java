@@ -165,8 +165,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
      *
      *      Required：坐老王车
      *      Requires_new：一定得开车，开新的
-     *
-     *      SUPPORTS：用车，有车就用，没车走路；
+     *     *      SUPPORTS：用车，有车就用，没车走路；
      *      MANDATORY：用车，没车就骂街。。。
      *
      *      NOT_SUPPORTED：不支持用车。有车放那不用

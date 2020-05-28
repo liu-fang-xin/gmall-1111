@@ -57,4 +57,22 @@ public class ProductCategoryServiceImpl extends ServiceImpl<ProductCategoryMappe
         }
         return items;
     }
+
+    @Override
+    public List<PmsProductCategoryWithChildrenItem> queryAllCatelogs() {
+        Object cacheMenu = redisTemplate.opsForValue().get(SysCacheConstant.CATEGORY_MENU_CACHE_KEY);
+        List<PmsProductCategoryWithChildrenItem> items;
+        if(cacheMenu!=null){
+            //缓存中有
+            log.debug("菜单数据命中缓存......");
+            items = (List<PmsProductCategoryWithChildrenItem>) cacheMenu;
+        }else {
+            items  =  categoryMapper.listCatelogWithChilder1();
+            redisTemplate.opsForValue().set(SysCacheConstant.CATEGORY_MENU_CACHE_KEY,items);
+        }
+
+        return items;
+    }
+
+
 }

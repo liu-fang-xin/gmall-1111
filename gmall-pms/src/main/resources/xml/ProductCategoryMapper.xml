@@ -34,10 +34,20 @@
 
     </resultMap>
 
+    <resultMap id="ExtendResultMap1"
+               type="com.atguigu.gmall.vo.product.PmsProductCategoryWithChildrenItem"
+               extends="BaseResultMap">
+    <!--让PmsProductCategoryWithChildrenItem的children为空，在controller中设置-->
+    </resultMap>
+
     <!--缓存-->
     <!--List<PmsProductCategoryWithChildrenItem> listCatelogWithChilder(Integer i);-->
     <select id="listCatelogWithChilder" resultMap="ExtendResultMap">
         select * from pms_product_category where parent_id=#{i}
+    </select>
+
+    <select id="listCatelogWithChilder1" resultMap="ExtendResultMap1">
+        select * from pms_product_category
     </select>
 
 

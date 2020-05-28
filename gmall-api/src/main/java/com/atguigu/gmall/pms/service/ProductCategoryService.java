@@ -22,4 +22,6 @@ public interface ProductCategoryService extends IService<ProductCategory> {
      * @return
      */
     List<PmsProductCategoryWithChildrenItem> listCatelogWithChilder(Integer i);
+
+    List<PmsProductCategoryWithChildrenItem> queryAllCatelogs();
 }
